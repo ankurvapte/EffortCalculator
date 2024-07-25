@@ -66,3 +66,5 @@ obj/Debug/net8.0/staticwebassets/msbuild.build.EffortCalculator.props
 obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.EffortCalculator.props
 obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.EffortCalculator.props
 obj/Debug/net8.0/staticwebassets/msbuild.EffortCalculator.Microsoft.AspNetCore.StaticWebAssets.props
+obj/Debug/net8.0/EffortCalculator.assets.cache
+obj/Debug/net8.0/EffortCalculator.csproj.FileListAbsolute.txt
