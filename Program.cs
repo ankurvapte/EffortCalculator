@@ -1,7 +1,16 @@
+using EffortCalculator;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Add services of the database context
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+    options.UseMySQL(connectionString: builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 
 var app = builder.Build();
 
