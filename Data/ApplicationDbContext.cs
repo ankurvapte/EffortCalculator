@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace EffortCalculator;
 
@@ -10,4 +11,13 @@ public class ApplicationDbContext : DbContext
     }
 
     public DbSet<Category> Categories { get; set; }
+
+    override protected void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Category>().HasData(
+            new Category() { Id = 1, Name = "Action", DisplayOrder = 1 },
+            new Category() { Id = 2, Name = "Sci-Fi", DisplayOrder = 2 },
+            new Category() { Id = 3, Name = "History", DisplayOrder = 3 }
+        );
+    }
 }
